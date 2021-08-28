@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+<!-- Product Style -->
+<section class="product-area shop-sidebar shop section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+                <form class="row" id="fh5co_contact_form" action="{% url 'store:register.html' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="col-6 py-3 text-center">
+                        <table class="table">
+                            <tr>
+                                <td></td>
+                                <td>{{user_form.as_table}}</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>{{profile_form.as_table}}</td>
+                            </tr>
+                            <td></td>
+                            <td> <input type="submit" class="btn contact_btn" value="Register"></td>
+                        </table>
+                    </div>                    
+                </form>
+            </div>
+		</div>
+        <div class="row">
+            <h6>{% if registered%}Your registration is successfully. {% endif %} </h6>            
+        </div>
+	</div>
+</section>
+    
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Slider Area -->
+<section class="hero-slider">
+	<!-- Single Slider -->
+	<a href="{% url 'store:shop.html' 0 %}">
+		<div class="single-slider">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-lg-9 offset-lg-3 col-12">
+						<div class="text-inner">
+							<div class="row">
+								<div class="col-lg-7 col-12">
+									<div class="hero-text">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</a>
+	<!--/ End Single Slider -->
+</section>
+<!--/ End Slider Area -->
+
+<!-- Start Most Popular -->
+<div class="product-area most-popular section">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h2>Sản phẩm mới</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1058178919334!2d106.62681501543544!3d10.80320689230335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752bfd5839005b%3A0x3147887f2a96133e!2zNiDEkMaw4budbmcgc-G7kSAyNywgU8ahbiBL4buzLCBUw6JuIFBow7osIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1625556973488!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

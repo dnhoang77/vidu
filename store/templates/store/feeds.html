@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Slider Area -->
+<section class="hero-slider">
+	<!-- Single Slider -->
+	<a href="{% url 'store:shop.html' 0 %}">
+		<div class="single-slider">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-lg-9 offset-lg-3 col-12">
+						<div class="text-inner">
+							<div class="row">
+								<div class="col-lg-7 col-12">
+									<div class="hero-text">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</a>
+	<!--/ End Single Slider -->
+</section>
+<!--/ End Slider Area -->
+
+<!-- Start Most Popular -->
+<div class="product-area most-popular section">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h2>Sản phẩm mới</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				{% if feeds %}
+                {% for entry in feeds %}
+                <div>                    
+                    <div class="col-md-12">
+                        <a href="{{entry.link}}" class="fh5co_magna py-2"> {{entry.title}} </a>
+                        <a href="{{entry.link}}" class="fh5co_mini_time py-3">
+                            {{entry.author}} - {{entry.published}} </a>
+                        <div class="fh5co_consectetur"> {{entry.summary|safe}}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
